@@ -1,0 +1,3 @@
+[submodule "StartDock"]
+	path = StartDock
+	url = https://github.com/Chrish0r/StartDock.git
