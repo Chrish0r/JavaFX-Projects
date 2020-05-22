@@ -3,6 +3,7 @@ package version1;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.effect.Reflection;
@@ -11,6 +12,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -24,6 +26,8 @@ public class Main extends Application {
             "version1/Images/intelli.png",
             "version1/Images/textedit.png"
     };
+
+    Rectangle2D screenSize = Screen.getPrimary().getVisualBounds();
     
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -65,6 +69,8 @@ public class Main extends Application {
 
         // Scene
         Scene scene = new Scene(root, 500, 200);
+        scene.setFill(Color.TRANSPARENT);
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.show();
@@ -135,7 +141,7 @@ public class Main extends Application {
                 e.printStackTrace();
             }
             System.out.println("Programm Ende.");
-            process.destroy(); // nach 5 Sekunden soll der Prozess beendet werden, damit keine weiteren Ressourcen mehr verbraucht werden
+          //  process.destroy(); // nach 5 Sekunden soll der Prozess beendet werden, damit keine weiteren Ressourcen mehr verbraucht werden
         } catch (Exception e) {
             e.printStackTrace();
         }
