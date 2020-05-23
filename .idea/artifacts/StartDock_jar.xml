@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="StartDock:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/StartDock_jar</output-path>
+    <root id="archive" name="JavaFX-projects.jar">
+      <element id="module-output" name="JavaFX-projects" />
+    </root>
+  </artifact>
+</component>
