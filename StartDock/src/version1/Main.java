@@ -138,7 +138,7 @@ public class Main extends Application {
         try {
             Process process = Runtime.getRuntime().exec(cmd);
             try {
-                Thread.sleep(5000);
+             //   Thread.sleep(5000);
             } catch (Exception e) {
                 e.printStackTrace();
             }
